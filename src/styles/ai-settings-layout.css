@@ -1,0 +1,65 @@
+/* Keep the shell stable while provider-specific fields scroll inside it. */
+.ai-settings-backdrop .ai-settings-dialog {
+  width: min(720px, 100%);
+  height: min(680px, calc(100dvh - 40px));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.ai-settings-dialog .ai-settings-header {
+  flex: 0 0 auto;
+  min-height: 104px;
+}
+.ai-settings-title-row { min-height: 44px; }
+.ai-settings-dialog .ai-settings-tab-row {
+  flex: 0 0 auto;
+  margin: 14px 0 0;
+}
+.ai-settings-body {
+  border: 0;
+  margin: 0;
+  min-width: 0;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  padding: 0 8px 12px 0;
+}
+.ai-settings-body .ai-provider-options {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 18px 0 20px;
+}
+.ai-settings-body .ai-provider-options button { min-height: 112px; }
+.ai-settings-body .ai-settings-field { padding: 12px 0; margin-bottom: 12px; }
+.ai-settings-body .ai-settings-field input { min-height: 30px; }
+.ai-settings-key-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:7px;min-height:16px}
+.ai-settings-key-heading label{display:flex;gap:10px;flex-wrap:wrap;align-items:baseline;font-size:11px}
+.ai-settings-key-heading em{color:var(--green)}
+.ai-settings-key-heading .btn{font-size:10px;padding:0 8px;line-height:16px;flex-shrink:0}
+.ai-settings-model-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.ai-settings-model-row .btn { flex-shrink: 0; font-size: 10px; padding: 5px 8px; }
+.ai-settings-dialog .ai-settings-actions {
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.ai-settings-dialog .ai-settings-actions > div { width: auto; }
+@media (max-width: 480px) {
+  .ai-settings-backdrop .ai-settings-dialog { height: calc(100dvh - 40px); padding: 18px; }
+  .ai-settings-title-row { gap: 8px; }
+  .ai-settings-body .ai-provider-options { grid-template-columns: 1fr; }
+  .ai-settings-body .ai-provider-options button { min-height: 90px; }
+  .ai-settings-dialog .ai-settings-actions { gap: 8px; }
+  .ai-settings-dialog .ai-settings-actions > div { gap: 6px; }
+  .ai-settings-dialog .ai-settings-actions .btn { padding: 8px; font-size: 11px; }
+  .ai-settings-model-row { flex-wrap: wrap; }
+}

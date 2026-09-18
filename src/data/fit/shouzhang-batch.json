@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "0.1",
+  "batchId": "shouzhang-stickers-fit-proxy-001",
+  "lineageId": "shouzhang-stickers-run-001",
+  "defineSpecSha256": "563fa8a8b8353b9e933228929c0a53c099b6d333e016799b8342a1d35c9de55f",
+  "purpose": "FIT",
+  "model": "ChatGPT built-in image generation (GPT proxy; not Seedream)",
+  "promptArtifact": "../../1.define/prompt-0.0.txt",
+  "promptSha256": "d18cfd8bcad0dc0b3dffc122a017f9feb9f040feea4a22681ca6de786b27bf04",
+  "fixedSetId": "shouzhang-stickers-fit-set-001",
+  "ready": true,
+  "cases": [
+    {
+      "caseId": "P0-01",
+      "applicabilityTier": "P0",
+      "inputAssets": [{"path": "inputs/P0-01.png", "sha256": "49fe09521c88e64c4388b6c967dfe8c67b66561d2c01019b527625c286e346c3"}],
+      "outputs": [{"outputId": "P0-01-O01", "path": "outputs/P0-01-O01.png", "sha256": "b03737b2584ea1026ea533c89f889ba86ddbc60658193353f4c40f8dcbed6b12"}],
+      "notes": "单只金毛幼犬、主体突出、草地背景；测试动物毛发与轮廓的简化保留。"
+    },
+    {
+      "caseId": "P0-02",
+      "applicabilityTier": "P0",
+      "inputAssets": [{"path": "inputs/P0-02.png", "sha256": "28c5e1cc039f47a347507883a1b81cd6bb702f7e6eb2499b9945451b6f15e06b"}],
+      "outputs": [{"outputId": "P0-02-O01", "path": "outputs/P0-02-O01.png", "sha256": "f094982ef3700fcd21f941670fc2ca47e2e8bb0290016a545c64d3d05aeedde5"}],
+      "notes": "单人物、浅蓝服装和白色背景；测试人物身份、配件与服装主色保留。"
+    },
+    {
+      "caseId": "P0-03",
+      "applicabilityTier": "P0",
+      "inputAssets": [{"path": "inputs/P0-03.png", "sha256": "60cf1225ce7ae90d3c7fdaa7eeadda0784c1a3d25455d3ee6fa68f6652cacfe0"}],
+      "outputs": [{"outputId": "P0-03-O01", "path": "outputs/P0-03-O01.png", "sha256": "6bf3fe6e9bc056de3ad56190515b2ea2cc8dd7e9066c64d584f958cd8856ee42"}],
+      "notes": "绿色街角商店与周边建筑；测试非人物场景的结构简化和贴纸化组织。"
+    },
+    {
+      "caseId": "P0-04",
+      "applicabilityTier": "P0",
+      "inputAssets": [{"path": "inputs/P0-04.png", "sha256": "8d21db9c0d8a495b7cf42caa26c24426e8ca0afee8e817bb24721dfcd8095570"}],
+      "outputs": [{"outputId": "P0-04-O01", "path": "outputs/P0-04-O01.png", "sha256": "4838b8611305712f505770ac1646e0ac29cdfb128b2b8ec54583c2b6493f5285"}],
+      "notes": "早餐桌面静物组合；测试陶瓷、玻璃、食物与花卉材质的纸面插画转译。"
+    },
+    {
+      "caseId": "P1-01",
+      "applicabilityTier": "P1",
+      "inputAssets": [{"path": "inputs/P1-01.png", "sha256": "5f5e682bae807740714ee077c4c193a9e727ddb1a072c2bf0414c50aacb12dcb"}],
+      "outputs": [{"outputId": "P1-01-O01", "path": "outputs/P1-01-O01.png", "sha256": "a4d023af05ac9b6f2e21fd7590f7645aac6022279135ee11e3db8c822fbc3f60"}],
+      "notes": "三人户外合照；测试三位主体的数量、关系、服装与道具保留。"
+    },
+    {
+      "caseId": "P1-02",
+      "applicabilityTier": "P1",
+      "inputAssets": [{"path": "inputs/P1-02.png", "sha256": "c4b55c74de83787667fb6cae068f13a610efe7685d7d725a9fc21b87f91438bd"}],
+      "outputs": [{"outputId": "P1-02-O01", "path": "outputs/P1-02-O01.png", "sha256": "5bcc04738fa12eac6ea9d65544dbd302368f1220de33e16997cc1e9d256fa851"}],
+      "notes": "节庆街道人像，背景人群、车辆、旗帜和输入水印较多；测试背景信息取舍及无关文字处理。"
+    },
+    {
+      "caseId": "P2-01",
+      "applicabilityTier": "P2",
+      "inputAssets": [{"path": "inputs/P2-01.png", "sha256": "f099a2660428949b60ace61fb4b1e23e11e3954114b739e58326c171fe8bb66f"}],
+      "outputs": [{"outputId": "P2-01-O01", "path": "outputs/P2-01-O01.png", "sha256": "4d91f39ded5e661e74e8b054546596d36a09ca4dc72dc0415cb8f3849021b0f2"}],
+      "notes": "三位较小人物处于复杂城市街景；测试小主体辨识、数量和城市细节取舍。"
+    },
+    {
+      "caseId": "P2-02",
+      "applicabilityTier": "P2",
+      "inputAssets": [{"path": "inputs/P2-02.png", "sha256": "3add160c9866d1618a5427f1131d6d38db4181526e45007f810ea72d97b8c52c"}],
+      "outputs": [{"outputId": "P2-02-O01", "path": "outputs/P2-02-O01.png", "sha256": "76ce1fe7d8b517231fd851d41fb484f0fce8e0cfe89097d45970cd184a8bdb84"}],
+      "notes": "标题和图形版式主导的活动海报；测试非照片型输入的适配边界。"
+    }
+  ]
+}

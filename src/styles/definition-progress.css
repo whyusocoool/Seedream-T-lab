@@ -1,0 +1,7 @@
+.definition-progress{border:1px solid #c8c6c0;padding:24px;margin:24px 0;background:#faf9f6;color:#171714}
+.definition-progress header{display:flex;justify-content:space-between;align-items:center}.definition-progress h2{margin:8px 0;font-size:24px}
+.definition-progress p,.definition-progress small{line-height:1.6}.definition-progress small{display:block;color:#77756e}
+.definition-progress ol{list-style:none;padding:0;display:grid;gap:16px;margin:24px 0}.definition-progress li{color:#8a8881;display:flex;gap:12px}.definition-progress li.current{color:#f45121}.definition-progress li.done{color:#64795c}
+.definition-progress details{margin-top:20px}.definition-error{white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;font:inherit;color:#bd3025;background:#fff0ec;padding:16px;border:1px solid #bd3025;max-height:none}
+.definition-spinner{display:inline-block;width:22px;height:22px;border:2px solid #ddd;border-top-color:#f45121;border-radius:50%;animation:definition-spin 1s linear infinite}@keyframes definition-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.definition-spinner{animation:none}}
+.definition-progress li.failed{color:#bd3025}

@@ -1,0 +1,320 @@
+{
+  "specVersion": "0.3",
+  "templateName": "手帐贴纸",
+  "runtimeInput": "Single image",
+  "runtimeInputInferred": false,
+  "usageScenario": "用户从照片创作入口选择模板，希望把一张旅行或生活照片转换为可直接收藏和分享的单页手帐贴纸成品。",
+  "alignment": {
+    "status": "ALIGNED",
+    "visual": {
+      "score": 83.33333333333333,
+      "status": "PASS",
+      "severeConflict": false,
+      "reason": "四张参考图稳定表达同一套手帐贴纸页视觉系统，仅绘画媒介有轻微差异。",
+      "dimensions": [
+        {
+          "id": "V01",
+          "name": "主体处理",
+          "level": 3,
+          "score": 75,
+          "commonPattern": "主要主体、数量与关系均从输入内容中保留并转译。",
+          "variation": "主体类别、数量与叙事关系随输入变化。",
+          "coverage": "ALL",
+          "reason": "均保留主体数量、关系和场景叙事，但主体类别与数量形成明确变化轴。",
+          "conflictingReferences": [],
+          "severeConflict": false
+        },
+        {
+          "id": "V02",
+          "name": "构图与布局",
+          "level": 4,
+          "score": 100,
+          "commonPattern": "四张均采用左侧主场景、右侧贴纸组的单页层级。",
+          "variation": "",
+          "coverage": "ALL",
+          "reason": "均为左侧主场景、右侧独立贴纸的单页布局。",
+          "conflictingReferences": [],
+          "severeConflict": false
+        },
+        {
+          "id": "V03",
+          "name": "材质与视觉质感",
+          "level": 3,
+          "score": 75,
+          "commonPattern": "均呈现暖白纸张、模切白边与手作贴纸质感。",
+          "variation": "R02 与 R04 的笔触分别偏水彩和扁平绘制。",
+          "coverage": "ALL",
+          "reason": "纸感和模切边一致，具体绘画媒介略有差异。",
+          "conflictingReferences": [
+            "R02",
+            "R04"
+          ],
+          "severeConflict": false
+        },
+        {
+          "id": "V04",
+          "name": "色彩与光线",
+          "level": 3,
+          "score": 75,
+          "commonPattern": "均从输入氛围提炼有限主色，以柔和光线和简化明暗组织色块。",
+          "variation": "季节、环境与输入主色带来冷暖和饱和度变化。",
+          "coverage": "ALL",
+          "reason": "均以有限主色和柔和光线简化明暗，但冷暖与饱和度随输入氛围变化。",
+          "conflictingReferences": [],
+          "severeConflict": false
+        },
+        {
+          "id": "V05",
+          "name": "图形与文字",
+          "level": 4,
+          "score": 100,
+          "commonPattern": "画面信息均由场景插画和同源贴纸图形表达，不形成独立排版层。",
+          "variation": "",
+          "coverage": "ALL",
+          "reason": "均使用统一贴纸图形语言且不依赖文字。",
+          "conflictingReferences": [],
+          "severeConflict": false
+        },
+        {
+          "id": "V06",
+          "name": "写实程度",
+          "level": 3,
+          "score": 75,
+          "commonPattern": "均为保留辨识度、简化体积与细节的非摄影插画。",
+          "variation": "笔触从水彩感到扁平描绘变化，细节简化程度略有不同。",
+          "coverage": "ALL",
+          "reason": "均为可辨识的非摄影插画，但笔触和细节简化程度存在变化。",
+          "conflictingReferences": [],
+          "severeConflict": false
+        }
+      ]
+    },
+    "intent": {
+      "score": 91.66666666666667,
+      "status": "PASS",
+      "severeConflict": false,
+      "reason": "单张照片输入、插画化转换和单页贴纸成品与使用场景一致。",
+      "dimensions": [
+        {
+          "id": "I01",
+          "name": "Input Match",
+          "level": 3,
+          "score": 75,
+          "commonPattern": "全部参考均可解释为单张生活或旅行照片的内容来源。",
+          "variation": "参考成品覆盖生活与旅行内容，但未穷尽所有单图输入类型。",
+          "coverage": "ALL",
+          "reason": "参考成品共同支持单张生活或旅行照片输入，但其他单图内容范围尚未被覆盖。",
+          "conflictingReferences": [],
+          "severeConflict": false
+        },
+        {
+          "id": "I02",
+          "name": "Transformation Match",
+          "level": 4,
+          "score": 100,
+          "commonPattern": "全部参考均表达照片内容重绘并拆解为场景与贴纸。",
+          "variation": "",
+          "coverage": "ALL",
+          "reason": "参考图共同表达照片内容重绘并拆解为贴纸。",
+          "conflictingReferences": [],
+          "severeConflict": false
+        },
+        {
+          "id": "I03",
+          "name": "Output Match",
+          "level": 4,
+          "score": 100,
+          "commonPattern": "全部参考均形成一张可独立收藏和分享的完整贴纸页。",
+          "variation": "",
+          "coverage": "ALL",
+          "reason": "参考图均为一张完整手帐贴纸页。",
+          "conflictingReferences": [],
+          "severeConflict": false
+        }
+      ]
+    },
+    "conflicts": [],
+    "recommendations": [
+      "继续生成模板定义，并在测试中验证绘画媒介差异。"
+    ]
+  },
+  "targetVisual": "把一张生活或旅行照片转换成一页具有手帐感的场景插画与贴纸组合。",
+  "heroReference": "R01",
+  "templateRuleSearch": [
+    {
+      "candidate": "输出必须形成一张可独立使用的完整手帐贴纸页，而不是照片展示或过程对照。",
+      "disposition": "RETAINED",
+      "rationale": "这是输出形式与产品价值契约，不能由任一视觉维度完整表达。",
+      "ruleId": "T01"
+    },
+    {
+      "candidate": "输入主体应被正确保留并保持关系。",
+      "disposition": "MERGED",
+      "rationale": "该要求完整属于主体处理维度。",
+      "overlapTarget": "V01"
+    },
+    {
+      "candidate": "画面不应出现标题、水印或边框。",
+      "disposition": "PRUNED",
+      "rationale": "参考图的缺失项不足以构成独立负向契约；V05 改为描述正向输出状态。",
+      "overlapTarget": "V05"
+    }
+  ],
+  "templateRules": [
+    {
+      "id": "T01",
+      "name": "成品形式",
+      "text": "输出应是一张完整手帐贴纸页，而不是输入照片的展示或对照。",
+      "priority": "MUST",
+      "score2": "完整呈现贴纸页成品。",
+      "score1": "贴纸页成立，但仍有轻微原照展示感。",
+      "score0": "主要呈现原照、对照或分屏。"
+    }
+  ],
+  "visualQualityRules": [
+    {
+      "id": "V01",
+      "name": "主体处理",
+      "text": "主要主体的身份、数量、显著特征与相互关系应被简化重绘，并保持与输入可识别的对应。",
+      "priority": "MUST",
+      "score2": "主要特征与关系完整保留。",
+      "score1": "基本特征保留，主体仍可识别。",
+      "score0": "主要特征明显错误，无法可靠对应输入。"
+    },
+    {
+      "id": "V02",
+      "name": "构图与布局",
+      "text": "画面应形成左侧主场景、右侧同源独立贴纸组的单页层级，并保持清楚比例与呼吸留白。",
+      "priority": "MUST",
+      "score2": "左右层级清楚，比例与留白稳定。",
+      "score1": "结构成立，但比例或留白不够稳定。",
+      "score0": "左右层级丢失或版式明显混乱。"
+    },
+    {
+      "id": "V03",
+      "name": "材质与视觉质感",
+      "text": "画面应统一呈现暖白纸张、模切白边与手作贴纸质感，允许水彩感或扁平笔触的小幅变化。",
+      "priority": "PREFERRED",
+      "score2": "纸张与贴纸质感完整统一。",
+      "score1": "整体质感成立，局部不够稳定。",
+      "score0": "主要材质语言缺失或明显错误。"
+    },
+    {
+      "id": "V04",
+      "name": "色彩与光线",
+      "text": "配色应提炼输入主色为边界清楚的有限色块，以简化明暗、柔和光线和适度主体背景对比维持氛围。",
+      "priority": "PREFERRED",
+      "score2": "主色与光感准确且协调。",
+      "score1": "整体接近，局部色调或对比偏差。",
+      "score0": "主色或光感明显背离输入。"
+    },
+    {
+      "id": "V05",
+      "name": "图形与文字",
+      "text": "画面信息应主要由场景插画和同源贴纸图形表达，不形成独立标题、标签或装饰性排版层。",
+      "priority": "PREFERRED",
+      "score2": "信息由场景与贴纸自然表达，无独立排版层。",
+      "score1": "图形表达为主，但出现轻微独立排版感。",
+      "score0": "标题或装饰排版层主导画面信息。"
+    },
+    {
+      "id": "V06",
+      "name": "写实程度",
+      "text": "输出应保持主体可辨识、体积可信且细节受控的非摄影插画，允许水彩到扁平描绘之间的笔触变化。",
+      "priority": "PREFERRED",
+      "score2": "插画化程度统一，形体可信。",
+      "score1": "整体成立，局部过度写实或失真。",
+      "score0": "写实程度混乱或形体明显不可信。"
+    }
+  ],
+  "ruleQualityReview": [
+    {"ruleId":"V01","stableFeatures":["主体身份与显著特征可辨","数量与关系来自输入"],"allowedVariation":["主体类别与数量随输入变化"],"identityFeatures":["同源重绘而非泛化替换"],"coverageComplete":true},
+    {"ruleId":"V02","stableFeatures":["左主场景右贴纸组","单页层级与留白"],"allowedVariation":["贴纸数量与局部尺寸"],"identityFeatures":["场景与贴纸并置"],"coverageComplete":true},
+    {"ruleId":"V03","stableFeatures":["暖白纸张","模切白边","手作贴纸质感"],"allowedVariation":["水彩或扁平笔触"],"identityFeatures":["纸面与异形贴纸的实体感"],"coverageComplete":true},
+    {"ruleId":"V04","stableFeatures":["有限主色","清晰色块","简化明暗与柔和光线"],"allowedVariation":["冷暖和饱和度随输入氛围变化"],"identityFeatures":["柔和但主体背景可分"],"coverageComplete":true},
+    {"ruleId":"V05","stableFeatures":["信息由场景和贴纸图形表达","无独立排版层"],"allowedVariation":["贴纸内部可出现输入固有的小型图形信息"],"identityFeatures":["图形表达优先于文字排版"],"coverageComplete":true},
+    {"ruleId":"V06","stableFeatures":["非摄影插画","主体可辨","体积可信且细节简化"],"allowedVariation":["水彩到扁平描绘的笔触变化"],"identityFeatures":["简化但不失真"],"coverageComplete":true}
+  ],
+  "initialApplicability": {
+    "status": "INITIAL_HYPOTHESIS",
+    "p0Advantage": [
+      {
+        "description": "单张、主体清晰的生活或旅行照片，主要人物、动物或物体不超过 3 个。",
+        "rationale": "容易同时形成清晰主场景与可辨识贴纸元素。"
+      }
+    ],
+    "p1Supported": [
+      {
+        "description": "单张、多主体或背景较复杂的照片，主体关系仍可辨。",
+        "rationale": "模板仍可成立，但主体保留和贴纸拆解更具挑战。"
+      }
+    ],
+    "p2BoundaryNotRecommended": [
+      {
+        "description": "主体极小、严重遮挡，或文字和图形版式主导的图片。",
+        "rationale": "输入重点与模板的场景重绘目标不匹配。"
+      }
+    ]
+  },
+  "fitTestPlan": {
+    "summary": "用八张不同输入先验证模型对主体类型、关系、环境与边界内容的覆盖能力，每张只运行一次。",
+    "rows": [
+      {"testId":"P0-01","tier":"P0","inputDescription":"配色鲜明、主体单一突出、背景简单的宠物照片。","challengeVariable":"动物毛发与轮廓的简化保留","inputCount":1,"runsPerInput":1,"totalOutputs":1},
+      {"testId":"P0-02","tier":"P0","inputDescription":"轮廓和服装配色清楚、背景干净的单人物生活照片。","challengeVariable":"人物身份与服装主色保留","inputCount":1,"runsPerInput":1,"totalOutputs":1},
+      {"testId":"P0-03","tier":"P0","inputDescription":"主体明确、色块层次清楚的建筑或景物照片。","challengeVariable":"非人物场景的贴纸化组织","inputCount":1,"runsPerInput":1,"totalOutputs":1},
+      {"testId":"P0-04","tier":"P0","inputDescription":"轮廓清楚、材质明确、背景简洁的单件静物照片。","challengeVariable":"物体材质向纸面插画转译","inputCount":1,"runsPerInput":1,"totalOutputs":1},
+      {"testId":"P1-01","tier":"P1","inputDescription":"两至三人关系明确、背景不拥挤的旅行合照。","challengeVariable":"多主体关系保留","inputCount":1,"runsPerInput":1,"totalOutputs":1},
+      {"testId":"P1-02","tier":"P1","inputDescription":"单人物处于装饰元素较多但主体仍突出的室内照片。","challengeVariable":"背景信息取舍","inputCount":1,"runsPerInput":1,"totalOutputs":1},
+      {"testId":"P2-01","tier":"P2","inputDescription":"主体较小但轮廓仍可辨、背景细节丰富的城市照片。","challengeVariable":"小主体辨识","inputCount":1,"runsPerInput":1,"totalOutputs":1},
+      {"testId":"P2-02","tier":"P2","inputDescription":"以醒目标题和图形版式为主要信息的海报图片。","challengeVariable":"非照片型输入适配边界","inputCount":1,"runsPerInput":1,"totalOutputs":1}
+    ]
+  },
+  "tuneTestPlan": {
+    "summary": "Rule Freeze 后用十二张固定输入比较 Prompt 版本；每张运行三次以观察稳定性和回归。",
+    "rows": [
+      {"testId":"P0-01","tier":"P0","inputDescription":"配色鲜明、背景简单的单只短毛宠物照片。","challengeVariable":"宠物轮廓保留","inputCount":1,"runsPerInput":3,"totalOutputs":3},
+      {"testId":"P0-02","tier":"P0","inputDescription":"服装主色清楚、正面可辨的单人物生活照片。","challengeVariable":"人物身份保留","inputCount":1,"runsPerInput":3,"totalOutputs":3},
+      {"testId":"P0-03","tier":"P0","inputDescription":"色块层次清楚、主体居中的单体建筑照片。","challengeVariable":"建筑结构简化","inputCount":1,"runsPerInput":3,"totalOutputs":3},
+      {"testId":"P0-04","tier":"P0","inputDescription":"材质明确、轮廓简洁的单件日常静物照片。","challengeVariable":"静物材质转译","inputCount":1,"runsPerInput":3,"totalOutputs":3},
+      {"testId":"P0-05","tier":"P0","inputDescription":"主景清楚、冷色氛围明确的自然风景照片。","challengeVariable":"冷色氛围提炼","inputCount":1,"runsPerInput":3,"totalOutputs":3},
+      {"testId":"P0-06","tier":"P0","inputDescription":"主景清楚、暖色光线明确的街景照片。","challengeVariable":"暖色光感提炼","inputCount":1,"runsPerInput":3,"totalOutputs":3},
+      {"testId":"P1-01","tier":"P1","inputDescription":"两至三人姿态关系明确的旅行合照。","challengeVariable":"多主体关系","inputCount":1,"runsPerInput":3,"totalOutputs":3},
+      {"testId":"P1-02","tier":"P1","inputDescription":"单人物处于装饰丰富室内、主体仍明显的照片。","challengeVariable":"背景取舍","inputCount":1,"runsPerInput":3,"totalOutputs":3},
+      {"testId":"P1-03","tier":"P1","inputDescription":"三至五件物体轻度遮挡的桌面场景照片。","challengeVariable":"物体遮挡","inputCount":1,"runsPerInput":3,"totalOutputs":3},
+      {"testId":"P1-04","tier":"P1","inputDescription":"主体轮廓清楚但颜色接近背景的生活照片。","challengeVariable":"低色差分离","inputCount":1,"runsPerInput":3,"totalOutputs":3},
+      {"testId":"P2-01","tier":"P2","inputDescription":"主体较小、背景细节丰富的城市远景照片。","challengeVariable":"小主体边界","inputCount":1,"runsPerInput":3,"totalOutputs":3},
+      {"testId":"P2-02","tier":"P2","inputDescription":"以标题和图形版式为主的海报图片。","challengeVariable":"非照片型输入边界","inputCount":1,"runsPerInput":3,"totalOutputs":3}
+    ]
+  },
+  "promptVersion": "0.0",
+  "seedreamPrompt": "基于用户输入的一张照片，生成一张可独立收藏和分享的竖版暖白手帐贴纸页。左侧重绘完整场景，右侧排布来自同一输入的独立贴纸组，保留主要主体的身份、数量、显著特征与关系，并保持清楚比例和呼吸留白。统一呈现暖白纸张、模切白边与手作贴纸质感；从输入提炼有限主色，以边界清楚的色块、简化明暗和柔和光线组织画面。整体保持主体可辨、体积可信、细节受控的非摄影插画，画面信息由场景与贴纸图形自然表达。",
+  "promptRuleMap": [
+    {
+      "sentence": "基于用户输入的一张照片，生成一张可独立收藏和分享的竖版暖白手帐贴纸页。",
+      "ruleIds": [
+        "T01"
+      ]
+    },
+    {
+      "sentence": "左侧重绘完整场景，右侧排布来自同一输入的独立贴纸组，保留主要主体的身份、数量、显著特征与关系，并保持清楚比例和呼吸留白。",
+      "ruleIds": [
+        "V01",
+        "V02"
+      ]
+    },
+    {
+      "sentence": "统一呈现暖白纸张、模切白边与手作贴纸质感；从输入提炼有限主色，以边界清楚的色块、简化明暗和柔和光线组织画面。",
+      "ruleIds": [
+        "V03",
+        "V04"
+      ]
+    },
+    {
+      "sentence": "整体保持主体可辨、体积可信、细节受控的非摄影插画，画面信息由场景与贴纸图形自然表达。",
+      "ruleIds": [
+        "V05",
+        "V06"
+      ]
+    }
+  ]
+}

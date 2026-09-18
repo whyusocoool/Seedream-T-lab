@@ -1,0 +1,55 @@
+.ai-define-progress {
+  border: 1px solid var(--line);
+  background: var(--white);
+  padding: 12px 14px;
+  margin: 0 0 14px;
+}
+
+.ai-define-progress-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 11px;
+}
+
+.ai-define-progress-head b {
+  font: 600 15px 'DM Mono';
+  color: var(--accent);
+}
+
+.ai-define-progress-track {
+  height: 7px;
+  background: var(--panel);
+  margin: 9px 0 7px;
+  overflow: hidden;
+}
+
+.ai-define-progress-track span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transition: width .6s ease;
+}
+
+.ai-define-progress-track.indeterminate span {
+  width: 32%;
+  animation: ai-progress-indeterminate 1.25s ease-in-out infinite;
+}
+
+@keyframes ai-progress-indeterminate {
+  from { transform: translateX(-110%); }
+  to { transform: translateX(420%); }
+}
+
+.ai-define-progress small {
+  display: block;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.ai-inline-error {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

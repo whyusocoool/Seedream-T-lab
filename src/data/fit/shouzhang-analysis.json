@@ -1,0 +1,156 @@
+{
+  "reportType": "FIT",
+  "schemaVersion": "0.2",
+  "templateName": "手帐贴纸",
+  "lineageId": "shouzhang-stickers-run-001",
+  "sourceBatch": "shouzhang-stickers-fit-proxy-001",
+  "model": "ChatGPT built-in image generation (GPT proxy; not Seedream)",
+  "promptVersion": "0.0",
+  "caseCount": 8,
+  "ruleScores": [
+    {
+      "ruleId": "T01", "priority": "MUST",
+      "scores": [
+        {"caseId":"P0-01","outputId":"P0-01-O01","applicable":true,"score":2},
+        {"caseId":"P0-02","outputId":"P0-02-O01","applicable":true,"score":2},
+        {"caseId":"P0-03","outputId":"P0-03-O01","applicable":true,"score":2},
+        {"caseId":"P0-04","outputId":"P0-04-O01","applicable":true,"score":2},
+        {"caseId":"P1-01","outputId":"P1-01-O01","applicable":true,"score":2},
+        {"caseId":"P1-02","outputId":"P1-02-O01","applicable":true,"score":2},
+        {"caseId":"P2-01","outputId":"P2-01-O01","applicable":true,"score":2},
+        {"caseId":"P2-02","outputId":"P2-02-O01","applicable":true,"score":2}
+      ],
+      "actualPoints": 16, "maxPoints": 16, "score": 100
+    },
+    {
+      "ruleId": "V01", "priority": "MUST",
+      "scores": [
+        {"caseId":"P0-01","outputId":"P0-01-O01","applicable":true,"score":2},
+        {"caseId":"P0-02","outputId":"P0-02-O01","applicable":true,"score":2},
+        {"caseId":"P0-03","outputId":"P0-03-O01","applicable":true,"score":2},
+        {"caseId":"P0-04","outputId":"P0-04-O01","applicable":true,"score":2},
+        {"caseId":"P1-01","outputId":"P1-01-O01","applicable":true,"score":2},
+        {"caseId":"P1-02","outputId":"P1-02-O01","applicable":true,"score":2},
+        {"caseId":"P2-01","outputId":"P2-01-O01","applicable":true,"score":2},
+        {"caseId":"P2-02","outputId":"P2-02-O01","applicable":true,"score":2}
+      ],
+      "actualPoints": 16, "maxPoints": 16, "score": 100
+    },
+    {
+      "ruleId": "V02", "priority": "MUST",
+      "scores": [
+        {"caseId":"P0-01","outputId":"P0-01-O01","applicable":true,"score":2},
+        {"caseId":"P0-02","outputId":"P0-02-O01","applicable":true,"score":2},
+        {"caseId":"P0-03","outputId":"P0-03-O01","applicable":true,"score":2},
+        {"caseId":"P0-04","outputId":"P0-04-O01","applicable":true,"score":2},
+        {"caseId":"P1-01","outputId":"P1-01-O01","applicable":true,"score":2},
+        {"caseId":"P1-02","outputId":"P1-02-O01","applicable":true,"score":2},
+        {"caseId":"P2-01","outputId":"P2-01-O01","applicable":true,"score":2},
+        {"caseId":"P2-02","outputId":"P2-02-O01","applicable":true,"score":2}
+      ],
+      "actualPoints": 16, "maxPoints": 16, "score": 100
+    },
+    {
+      "ruleId": "V03", "priority": "PREFERRED",
+      "scores": [
+        {"caseId":"P0-01","outputId":"P0-01-O01","applicable":true,"score":2},
+        {"caseId":"P0-02","outputId":"P0-02-O01","applicable":true,"score":2},
+        {"caseId":"P0-03","outputId":"P0-03-O01","applicable":true,"score":2},
+        {"caseId":"P0-04","outputId":"P0-04-O01","applicable":true,"score":2},
+        {"caseId":"P1-01","outputId":"P1-01-O01","applicable":true,"score":2},
+        {"caseId":"P1-02","outputId":"P1-02-O01","applicable":true,"score":2},
+        {"caseId":"P2-01","outputId":"P2-01-O01","applicable":true,"score":2},
+        {"caseId":"P2-02","outputId":"P2-02-O01","applicable":true,"score":2}
+      ],
+      "actualPoints": 16, "maxPoints": 16, "score": 100
+    },
+    {
+      "ruleId": "V04", "priority": "PREFERRED",
+      "scores": [
+        {"caseId":"P0-01","outputId":"P0-01-O01","applicable":true,"score":2},
+        {"caseId":"P0-02","outputId":"P0-02-O01","applicable":true,"score":2},
+        {"caseId":"P0-03","outputId":"P0-03-O01","applicable":true,"score":2},
+        {"caseId":"P0-04","outputId":"P0-04-O01","applicable":true,"score":2},
+        {"caseId":"P1-01","outputId":"P1-01-O01","applicable":true,"score":2},
+        {"caseId":"P1-02","outputId":"P1-02-O01","applicable":true,"score":2},
+        {"caseId":"P2-01","outputId":"P2-01-O01","applicable":true,"score":2},
+        {"caseId":"P2-02","outputId":"P2-02-O01","applicable":true,"score":2}
+      ],
+      "actualPoints": 16, "maxPoints": 16, "score": 100
+    },
+    {
+      "ruleId": "V05", "priority": "PREFERRED",
+      "scores": [
+        {"caseId":"P0-01","outputId":"P0-01-O01","applicable":true,"score":2},
+        {"caseId":"P0-02","outputId":"P0-02-O01","applicable":true,"score":2},
+        {"caseId":"P0-03","outputId":"P0-03-O01","applicable":true,"score":1,"note":"店铺附着招牌被保留为不可读文字纹理，但未形成独立标题层。"},
+        {"caseId":"P0-04","outputId":"P0-04-O01","applicable":true,"score":2},
+        {"caseId":"P1-01","outputId":"P1-01-O01","applicable":true,"score":2},
+        {"caseId":"P1-02","outputId":"P1-02-O01","applicable":true,"score":1,"note":"输入衣物品牌标志被保留，图形仍主导但文字与标识控制不完全。"},
+        {"caseId":"P2-01","outputId":"P2-01-O01","applicable":true,"score":2},
+        {"caseId":"P2-02","outputId":"P2-02-O01","applicable":true,"score":0,"note":"输入海报的大标题与中心文字被继续重建，并作为独立贴纸重复，排版继续主导画面。"}
+      ],
+      "actualPoints": 12, "maxPoints": 16, "score": 75
+    },
+    {
+      "ruleId": "V06", "priority": "PREFERRED",
+      "scores": [
+        {"caseId":"P0-01","outputId":"P0-01-O01","applicable":true,"score":2},
+        {"caseId":"P0-02","outputId":"P0-02-O01","applicable":true,"score":2},
+        {"caseId":"P0-03","outputId":"P0-03-O01","applicable":true,"score":2},
+        {"caseId":"P0-04","outputId":"P0-04-O01","applicable":true,"score":2},
+        {"caseId":"P1-01","outputId":"P1-01-O01","applicable":true,"score":2},
+        {"caseId":"P1-02","outputId":"P1-02-O01","applicable":true,"score":2},
+        {"caseId":"P2-01","outputId":"P2-01-O01","applicable":true,"score":2},
+        {"caseId":"P2-02","outputId":"P2-02-O01","applicable":true,"score":2}
+      ],
+      "actualPoints": 16, "maxPoints": 16, "score": 100
+    }
+  ],
+  "summaryScores": {"overall": 98.07692307692308, "must": 100, "preferred": 93.75},
+  "hardGates": {"overallPass": true, "mustPassRatePass": true, "everyMustRulePassRatePass": true, "pass": true},
+  "status": "GO",
+  "promptOptimizationRecommended": true,
+  "recommendedActions": ["CONTINUE_TUNING"],
+  "capabilitySignals": [
+    "8 个 proxy 输出均形成完整竖版手帐贴纸页，T01、V01、V02 三项 MUST Rule 全部稳定通过。",
+    "宠物、人物、建筑、静物、多主体和城市远景均能维持左侧主场景与右侧同源贴纸组。",
+    "暖白纸张、模切白边、有限主色和非摄影插画语言在全部输入中保持一致。"
+  ],
+  "failures": [
+    {
+      "id": "F01",
+      "name": "附着文字与标志控制不稳定",
+      "description": "建筑招牌或衣物标志可能被保留为不可读文字纹理或品牌样式，削弱纯图形表达。",
+      "relatedRules": ["V05"],
+      "frequency": {"count": 2, "total": 8},
+      "severity": "Low",
+      "promptFixability": "High",
+      "evidenceCases": ["P0-03", "P1-02"],
+      "evidenceOutputs": ["P0-03-O01", "P1-02-O01"]
+    },
+    {
+      "id": "F02",
+      "name": "文字主导海报无法去排版化",
+      "description": "当输入本身以标题和图形版式为主要信息时，输出继续重建并重复文字，无法满足 V05 的非独立排版状态。",
+      "relatedRules": ["V05"],
+      "frequency": {"count": 1, "total": 8},
+      "severity": "Medium",
+      "promptFixability": "Low",
+      "evidenceCases": ["P2-02"],
+      "evidenceOutputs": ["P2-02-O01"]
+    }
+  ],
+  "candidateRules": [],
+  "tunePriorities": ["V05"],
+  "recommendations": [
+    "进入 TUNE 前保留 V05 为唯一优先观察项，重点压缩非必要招牌、品牌标志和不可读文字纹理。",
+    "继续将文字与版式主导图片保留在 P2 Boundary / Not Recommended，不为该边界输入削弱模板核心构图。",
+    "正式 Seedream FIT 必须使用相同输入、Prompt 与 rubric 重新运行，本次 GPT proxy 分数不可跨模型沿用。"
+  ],
+  "riskFlags": [
+    "本批由 ChatGPT 内置图像模型代跑，并非 Seedream；结果只验证模板规则与 FIT 流程的可执行性。",
+    "每个输入仅生成一次，不能据此判断重复生成稳定性。",
+    "ChatGPT 与 Seedream 对文字、品牌标志及人物身份的处理可能不同，V05 结论不可跨模型外推。"
+  ]
+}

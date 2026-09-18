@@ -1,0 +1,65 @@
+/* Shared shell: one navigation geometry for all authenticated screens. */
+:root { --app-header-height:72px; --app-page-gutter:28px; }
+.topbar.app-header {
+  height:var(--app-header-height); min-height:var(--app-header-height); flex-shrink:0;
+  padding:0 var(--app-page-gutter); display:grid;
+  grid-template-columns:260px minmax(0,1fr) auto; align-items:center;
+  position:relative; background:var(--paper); backdrop-filter:none;
+  border-bottom:1px solid var(--ink); z-index:20;
+}
+.app-header .brand { font-size:20px; letter-spacing:-1.2px; line-height:29px; white-space:nowrap; }
+.app-header .topnav { height:100%; gap:76px; display:flex; }
+.app-header .topnav a { height:57px; padding:26px 0 0; font-size:16px; line-height:17.4px; font-weight:600; border-bottom:3px solid transparent; }
+.app-header .topnav a.active { color:var(--accent); border-color:var(--accent); }
+.app-header .user-chip { grid-column:3; justify-self:end; font-size:12px; gap:10px; }
+.app-header .user-chip .eyebrow { font-size:11px; }
+.app-header .avatar { width:34px; height:34px; }
+.canvas-page.canvas-page { display:flex; flex-direction:column; height:100dvh; }
+.canvas-page .canvas-tools { flex-shrink:0; padding-inline:calc(var(--app-page-gutter) + 12px); }
+.canvas-page .canvas-tools>input { width:240px; }
+.canvas-page .canvas-viewport { flex:1; height:auto; min-height:0; }
+.create-layout.create-layout,.test-create-page.test-create-page,.form-layout.form-layout { min-height:calc(100dvh - var(--app-header-height)); }
+.workflow-page.workflow-page { min-height:calc(100dvh - var(--app-header-height)) !important; padding:var(--app-page-gutter) !important; }
+@media(max-width:1050px){
+  .topbar.app-header { grid-template-columns:minmax(180px,1fr) 1fr auto; }
+  .app-header .topnav { gap:36px; }
+}
+@media(max-width:620px){
+  :root { --app-page-gutter:16px; }
+  .topbar.app-header { grid-template-columns:minmax(0,1fr) auto auto; gap:16px; }
+  .app-header .brand { font-size:16px; }
+  .app-header .topnav { gap:18px; }
+  .app-header .user-chip>span { display:none; }
+  .canvas-page .canvas-tools { padding-inline:var(--app-page-gutter); }
+}
+.auth-loading { min-height:100dvh; display:grid; place-items:center; color:var(--muted); letter-spacing:.08em; }
+.account-backdrop{position:fixed;inset:0;background:rgba(17,17,15,.28);z-index:500;display:grid;place-items:center;padding:24px;text-align:left}
+.account-dialog{width:min(520px,100%);max-height:calc(100dvh - 48px);overflow:auto;background:var(--paper);border:1px solid var(--ink);box-shadow:12px 14px 0 rgba(17,17,15,.16);padding:30px}
+.account-dialog>header,.account-dialog>footer,.account-identity{display:flex;align-items:center;justify-content:space-between;gap:20px}.account-dialog h2{font-size:34px;margin:5px 0 0}.account-close{border:0;background:transparent;font-size:32px;line-height:1;width:40px;height:40px}.account-identity{justify-content:flex-start;border-block:1px solid var(--line);padding:18px 0;margin:22px 0}.account-identity .avatar{width:48px;height:48px}.account-identity b,.account-identity span{display:block}.account-identity span{font-size:12px;color:var(--muted);margin-top:4px}.account-dialog form{display:grid;gap:15px}.account-dialog label{display:grid;gap:7px;font-size:12px;color:var(--muted)}.account-dialog input{border:1px solid var(--line);background:transparent;color:var(--ink);padding:13px;font:inherit}.account-divider{border-top:1px solid var(--line);margin-top:6px;padding-top:13px;color:var(--muted);font-size:11px}.account-save{margin-top:4px;padding:14px}.account-error{color:var(--accent);margin:0}.account-success{color:#16845b;margin:0}.account-dialog>footer{border-top:1px solid var(--line);margin-top:22px;padding-top:18px;color:var(--muted);font-size:11px}.account-dialog>footer button{border:0;background:transparent;color:var(--accent);text-decoration:underline}.cloud-field-hint{color:var(--muted)}
+.account-secondary-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}.account-panel-back{justify-self:start;border:0;background:transparent;padding:0;color:var(--muted);text-decoration:underline}.account-dialog form h3,.account-job-panel h3{font-size:24px;margin:5px 0}.account-job-panel{display:grid;gap:16px}.account-job-panel>p{font-size:12px;color:var(--muted)}.account-job-options{display:grid;grid-template-columns:1fr 1fr}.account-job-options button{padding:18px;border:1px solid var(--ink);background:transparent;font:inherit}.account-job-options button+button{border-left:0}.account-job-options button:not(:disabled):hover{background:var(--ink);color:var(--paper)}.account-job-options button:disabled{background:var(--ink);color:var(--paper);opacity:1}
+.cloud-auth-page { min-height:100dvh; display:grid; grid-template-columns:1.1fr .9fr; background:var(--paper); }
+.cloud-auth-brand { padding:72px; border-right:1px solid var(--ink); display:flex; flex-direction:column; justify-content:space-between; }
+.cloud-auth-brand .brand { font-size:26px; }
+.cloud-auth-brand h1 { font-size:64px; line-height:1.08; margin:auto 0 24px; }
+.cloud-auth-brand p { max-width:520px; color:var(--muted); }
+.cloud-auth-form { width:min(430px,calc(100% - 48px)); margin:auto; display:grid; gap:20px; }
+.cloud-auth-form h2 { font-size:42px; margin:0 0 12px; }
+.cloud-auth-form label,.cloud-auth-form fieldset { display:grid; gap:8px; border:0; padding:0; margin:0; color:var(--muted); }
+.cloud-auth-form input { width:100%; border:1px solid var(--line); background:transparent; padding:15px; font:inherit; color:var(--ink); }
+.cloud-job-choice { display:grid; grid-template-columns:1fr 1fr; }
+.cloud-job-choice button { padding:14px; border:1px solid var(--line); background:transparent; }
+.cloud-job-choice button+button { border-left:0; }
+.cloud-job-choice button.active { background:var(--ink); color:var(--paper); }
+.cloud-auth-submit { padding:16px; border:1px solid var(--ink); background:var(--ink); color:var(--paper); font:inherit; }
+.cloud-auth-submit:disabled{opacity:.36;cursor:not-allowed}
+.cloud-auth-switch { border:0; background:transparent; color:var(--muted); text-decoration:underline; }
+.cloud-auth-message { color:var(--accent); margin:0; }
+.cloud-auth-sent p { max-width:440px; font-size:18px; line-height:1.7; }
+.cloud-auth-hint { color:#85827d; font-size:14px !important; }
+.auth-callback-page { min-height:100vh; display:grid; place-items:center; background:#f4f2ee; padding:32px; }
+.auth-callback-card { width:min(560px,100%); border:1px solid #171715; background:#f8f6f2; padding:64px; }
+.auth-callback-card h1 { margin:22px 0 12px; font-size:42px; }
+.auth-callback-card p { color:#77736e; font-size:17px; line-height:1.7; }
+.auth-callback-card button { margin-top:24px; border:1px solid #171715; background:#171715; color:#fff; padding:14px 26px; font:inherit; cursor:pointer; }
+.auth-callback-mark { margin-top:28px; color:#16845b; font-size:44px; font-weight:700; }
+@media(max-width:760px){.cloud-auth-page{grid-template-columns:1fr}.cloud-auth-brand{display:none}}

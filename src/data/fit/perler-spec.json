@@ -1,0 +1,555 @@
+{
+  "specVersion": "0.3",
+  "templateName": "拼豆风格",
+  "runtimeInput": "Single image",
+  "runtimeInputInferred": false,
+  "usageScenario": "用户从画板进入，想把某个人、物或场景转化为拼豆样式的结果。",
+  "alignment": {
+    "status": "ALIGNED",
+    "visual": {
+      "score": 83.33333333333333,
+      "status": "PASS",
+      "severeConflict": false,
+      "reason": "六张参考稳定表达同一实体拼豆视觉系统，构图随输入分为独立剪影与矩形场景两种模式。",
+      "dimensions": [
+        {
+          "id": "V01",
+          "name": "主体处理",
+          "level": 3,
+          "score": 75,
+          "commonPattern": "输入中的主要主体、数量、姿态、关系与关键辨识特征被简化为拼豆色块。",
+          "variation": "人物、动物、单体物件与完整场景带来主体数量和细节复杂度变化。",
+          "coverage": "ALL",
+          "reason": "均以简化轮廓和关键色块保留辨识度，但主体类型与数量构成一条明确变化轴。",
+          "conflictingReferences": [],
+          "severeConflict": false
+        },
+        {
+          "id": "V02",
+          "name": "构图与布局",
+          "level": 2,
+          "score": 50,
+          "commonPattern": "所有作品都沿正交豆格组织，并以完整主体或完整场景作为一个清楚整体。",
+          "variation": "R01–R04 是居中的独立剪影或挂件，R05–R06 是铺满矩形底板的场景。",
+          "coverage": "ALL",
+          "reason": "共同使用正交豆格和完整画面边界，但独立剪影与矩形场景是两种由输入内容解释的构图模式。",
+          "conflictingReferences": [
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "R05",
+            "R06"
+          ],
+          "severeConflict": false
+        },
+        {
+          "id": "V03",
+          "name": "材质与视觉质感",
+          "level": 4,
+          "score": 100,
+          "commonPattern": "全部由尺寸一致、中央开孔的圆柱形熔融拼豆紧密排列，豆粒与细小接缝清晰可见。",
+          "variation": "",
+          "coverage": "ALL",
+          "reason": "六张均稳定呈现等径中空拼豆、规则排列和可触摸的塑料实体感。",
+          "conflictingReferences": [],
+          "severeConflict": false
+        },
+        {
+          "id": "V04",
+          "name": "色彩与光线",
+          "level": 3,
+          "score": 75,
+          "commonPattern": "均用有限离散色块映射主体，并在柔和顶光下保留轻微明暗和投影。",
+          "variation": "配色、明暗层级和饱和度随输入主体与场景变化。",
+          "coverage": "ALL",
+          "reason": "均使用有限离散色和柔和实体光线，但具体色盘随输入变化。",
+          "conflictingReferences": [],
+          "severeConflict": false
+        },
+        {
+          "id": "V05",
+          "name": "图形与文字",
+          "level": 4,
+          "score": 100,
+          "commonPattern": "画面信息全部由拼豆轮廓、色块和孔洞节奏表达，不形成独立排版层。",
+          "variation": "",
+          "coverage": "ALL",
+          "reason": "六张都以拼豆造型本身传达内容，没有独立文字排版。",
+          "conflictingReferences": [],
+          "severeConflict": false
+        },
+        {
+          "id": "V06",
+          "name": "写实程度",
+          "level": 4,
+          "score": 100,
+          "commonPattern": "输出表现为真实拍摄的实体拼豆成品，具有统一豆粒尺度、厚度、孔洞和接触阴影。",
+          "variation": "",
+          "coverage": "ALL",
+          "reason": "六张均是物理可信的拼豆作品照片，而非平面像素画或普通插画。",
+          "conflictingReferences": [],
+          "severeConflict": false
+        }
+      ]
+    },
+    "intent": {
+      "score": 91.66666666666667,
+      "status": "PASS",
+      "severeConflict": false,
+      "reason": "单张图片输入、拼豆化转换和实体拼豆成品输出与使用场景一致；参考覆盖人物、动物与场景，但未穷尽所有单图类型。",
+      "dimensions": [
+        {
+          "id": "I01",
+          "name": "Input Match",
+          "level": 3,
+          "score": 75,
+          "commonPattern": "人物、动物和场景都可由单张图片提供。",
+          "variation": "参考未覆盖所有可能的单图主体和复杂度。",
+          "coverage": "ALL",
+          "reason": "六张共同支持单张图片输入，但输入范围仍有一条未覆盖的类型与复杂度变化轴。",
+          "conflictingReferences": [],
+          "severeConflict": false
+        },
+        {
+          "id": "I02",
+          "name": "Transformation Match",
+          "level": 4,
+          "score": 100,
+          "commonPattern": "输入内容被简化并量化到规则拼豆网格。",
+          "variation": "",
+          "coverage": "ALL",
+          "reason": "全部参考都表达从可辨内容到实体拼豆的同一转换。",
+          "conflictingReferences": [],
+          "severeConflict": false
+        },
+        {
+          "id": "I03",
+          "name": "Output Match",
+          "level": 4,
+          "score": 100,
+          "commonPattern": "输出是可见单颗豆粒的完整实体拼豆作品照片。",
+          "variation": "",
+          "coverage": "ALL",
+          "reason": "全部参考均为完整、物理可信的实体拼豆成品。",
+          "conflictingReferences": [],
+          "severeConflict": false
+        }
+      ]
+    },
+    "conflicts": [
+      "独立剪影与矩形场景画板是两种构图模式。"
+    ],
+    "recommendations": [
+      "在 FIT 中分别验证单体、多主体和完整场景，并观察模型能否依据输入稳定选择构图模式。"
+    ]
+  },
+  "targetVisual": "把单张人物、物体或场景图片转化成保留辨识特征的实体拼豆成品照片。",
+  "heroReference": "R02",
+  "templateRuleSearch": [
+    {
+      "candidate": "输出必须是可见单颗拼豆的实体成品，而不是普通像素画。",
+      "disposition": "MERGED",
+      "rationale": "实体成品状态可由材质与写实程度两个互补维度完整评分。",
+      "overlapTarget": "V03/V06"
+    },
+    {
+      "candidate": "按输入内容选择独立剪影或矩形场景画板。",
+      "disposition": "MERGED",
+      "rationale": "这是构图维度中由输入驱动的允许变化。",
+      "overlapTarget": "V02"
+    },
+    {
+      "candidate": "保留输入主体身份和关系。",
+      "disposition": "MERGED",
+      "rationale": "该要求完整属于主体处理维度。",
+      "overlapTarget": "V01"
+    },
+    {
+      "candidate": "不得出现文字。",
+      "disposition": "PRUNED",
+      "rationale": "参考中的缺失项不足以形成独立生成禁令；V05 正向描述图形表达状态。",
+      "overlapTarget": "V05"
+    }
+  ],
+  "templateRules": [],
+  "visualQualityRules": [
+    {
+      "id": "V01",
+      "name": "主体处理",
+      "text": "输入主体的身份、数量、姿态、关系和关键辨识特征应通过简化轮廓与色块保持可辨。",
+      "priority": "MUST",
+      "score2": "主体及关键特征完整、准确且一眼可辨。",
+      "score1": "主体仍可辨，但一个次要特征、姿态或关系有偏差。",
+      "score0": "主体身份、数量或核心关系明显错误。"
+    },
+    {
+      "id": "V02",
+      "name": "构图与布局",
+      "text": "作品应沿正交豆格形成边界完整、重心清楚的单一构图，并依输入内容选择独立剪影或矩形场景画板。",
+      "priority": "MUST",
+      "score2": "豆格对齐，构图完整清楚，所选模式与输入内容匹配。",
+      "score1": "整体成立，但边界、重心或模式选择略不稳定。",
+      "score0": "豆格或整体构图失控，主体被裁断或结构混乱。"
+    },
+    {
+      "id": "V03",
+      "name": "材质与视觉质感",
+      "text": "作品应由尺寸一致、中央开孔的圆柱形熔融拼豆逐颗紧密排列，豆粒、接缝与轻微塑料质感清楚可见。",
+      "priority": "MUST",
+      "score2": "全图豆粒等径、孔洞清楚、排列连续且材质可信。",
+      "score1": "总体为拼豆，但局部孔洞、尺度或接缝不稳定。",
+      "score0": "主要呈现像素块、马赛克或其他非拼豆材质。"
+    },
+    {
+      "id": "V04",
+      "name": "色彩与光线",
+      "text": "配色应把输入主色和明暗关系量化为有限离散色块，并以柔和顶光和轻微投影呈现实物。",
+      "priority": "PREFERRED",
+      "score2": "色盘有限且忠实，明暗层级和实体光线自然。",
+      "score1": "整体接近输入，但局部偏色、层级或投影不稳。",
+      "score0": "主色明显错误，或光影破坏拼豆实体感。"
+    },
+    {
+      "id": "V05",
+      "name": "图形与文字",
+      "text": "画面信息应由拼豆轮廓、色块与孔洞节奏表达，不形成脱离输入内容的独立文字排版层。",
+      "priority": "PREFERRED",
+      "score2": "信息完全由拼豆造型自然表达。",
+      "score1": "图形表达为主，但有轻微多余符号或排版感。",
+      "score0": "独立标题、标签或伪文字主导画面。"
+    },
+    {
+      "id": "V06",
+      "name": "写实程度",
+      "text": "最终图像应像真实拍摄的实体拼豆成品，保留统一豆粒尺度、厚度、孔洞、接触关系和自然阴影。",
+      "priority": "MUST",
+      "score2": "整体是物理可信的实体拼豆成品照片。",
+      "score1": "整体可信，但局部过平、悬浮或尺度失真。",
+      "score0": "主要是平面像素画、普通插画或不可信的塑料模拟。"
+    }
+  ],
+  "ruleQualityReview": [
+    {
+      "ruleId": "V01",
+      "stableFeatures": [
+        "主体身份与数量可辨",
+        "姿态、关系和关键特征同源"
+      ],
+      "allowedVariation": [
+        "主体类型、数量与复杂度"
+      ],
+      "identityFeatures": [
+        "同源辨识而非泛化替换"
+      ],
+      "coverageComplete": true
+    },
+    {
+      "ruleId": "V02",
+      "stableFeatures": [
+        "正交豆格",
+        "完整单一构图"
+      ],
+      "allowedVariation": [
+        "独立剪影或矩形场景画板"
+      ],
+      "identityFeatures": [
+        "内容驱动的两种构图模式"
+      ],
+      "coverageComplete": true
+    },
+    {
+      "ruleId": "V03",
+      "stableFeatures": [
+        "等径中空圆柱拼豆",
+        "逐颗紧密排列与清楚接缝"
+      ],
+      "allowedVariation": [
+        "轻微熔合程度和塑料光泽"
+      ],
+      "identityFeatures": [
+        "孔洞、等径豆粒和规则接缝"
+      ],
+      "coverageComplete": true
+    },
+    {
+      "ruleId": "V04",
+      "stableFeatures": [
+        "有限离散色",
+        "柔和顶光与轻微投影"
+      ],
+      "allowedVariation": [
+        "色盘随输入变化"
+      ],
+      "identityFeatures": [
+        "离散色而非连续渐变"
+      ],
+      "coverageComplete": true
+    },
+    {
+      "ruleId": "V05",
+      "stableFeatures": [
+        "信息由拼豆造型表达",
+        "无独立排版层"
+      ],
+      "allowedVariation": [
+        "输入固有的简单符号可被拼豆化"
+      ],
+      "identityFeatures": [
+        "拼豆图形优先"
+      ],
+      "coverageComplete": true
+    },
+    {
+      "ruleId": "V06",
+      "stableFeatures": [
+        "实体成品摄影感",
+        "统一尺度、厚度和自然接触关系"
+      ],
+      "allowedVariation": [
+        "拍摄角度与背景明度"
+      ],
+      "identityFeatures": [
+        "物理可信而非平面像素画"
+      ],
+      "coverageComplete": true
+    }
+  ],
+  "initialApplicability": {
+    "status": "INITIAL_HYPOTHESIS",
+    "p0Advantage": [
+      {
+        "description": "单张、主体清晰、轮廓明确的人物、动物、物体或层次简洁场景图；主要主体 1–3 个，非文字主导。",
+        "rationale": "有限轮廓和色块容易映射到正交豆格并保持辨识。"
+      }
+    ],
+    "p1Supported": [
+      {
+        "description": "单张、多主体、轻度遮挡或背景中等复杂的图片；人物、动物、物体或场景关系仍可辨。",
+        "rationale": "模板可成立，但数量、遮挡和背景取舍会增加量化难度。"
+      }
+    ],
+    "p2BoundaryNotRecommended": [
+      {
+        "description": "主体极小、严重遮挡、细节极密，或文字与版式主导的单张图片。",
+        "rationale": "拼豆分辨率和离散色限制会损失核心信息。"
+      }
+    ]
+  },
+  "fitTestPlan": {
+    "summary": "用八张不同输入验证主体保留、两种构图模式、拼豆材质和输入边界；每张运行一次。",
+    "rows": [
+      {
+        "testId": "P0-01",
+        "tier": "P0",
+        "inputDescription": "背景干净、轮廓清楚、主色鲜明的单只正面宠物照片。",
+        "challengeVariable": "动物轮廓与脸部关键特征",
+        "inputCount": 1,
+        "runsPerInput": 1,
+        "totalOutputs": 1
+      },
+      {
+        "testId": "P0-02",
+        "tier": "P0",
+        "inputDescription": "背景简单、服装和发型特征明确的单人物半身照片。",
+        "challengeVariable": "人物身份特征",
+        "inputCount": 1,
+        "runsPerInput": 1,
+        "totalOutputs": 1
+      },
+      {
+        "testId": "P0-03",
+        "tier": "P0",
+        "inputDescription": "轮廓简单、材质明确、单色背景的单件日常物体照片。",
+        "challengeVariable": "物体轮廓与内部色块",
+        "inputCount": 1,
+        "runsPerInput": 1,
+        "totalOutputs": 1
+      },
+      {
+        "testId": "P0-04",
+        "tier": "P0",
+        "inputDescription": "主体建筑突出、天空与地面层次清楚的简洁风景照片。",
+        "challengeVariable": "矩形场景模式",
+        "inputCount": 1,
+        "runsPerInput": 1,
+        "totalOutputs": 1
+      },
+      {
+        "testId": "P1-01",
+        "tier": "P1",
+        "inputDescription": "两个人姿态关系清楚、背景适中的生活合照。",
+        "challengeVariable": "双主体数量与关系",
+        "inputCount": 1,
+        "runsPerInput": 1,
+        "totalOutputs": 1
+      },
+      {
+        "testId": "P1-02",
+        "tier": "P1",
+        "inputDescription": "三至五个主要元素、前后景仍可分辨的室内场景照片。",
+        "challengeVariable": "多元素取舍与遮挡",
+        "inputCount": 1,
+        "runsPerInput": 1,
+        "totalOutputs": 1
+      },
+      {
+        "testId": "P2-01",
+        "tier": "P2",
+        "inputDescription": "主体较小、纹理和杂物很多的拥挤街景照片。",
+        "challengeVariable": "小主体与高复杂背景",
+        "inputCount": 1,
+        "runsPerInput": 1,
+        "totalOutputs": 1
+      },
+      {
+        "testId": "P2-02",
+        "tier": "P2",
+        "inputDescription": "文字占主导、同时含多个小图形元素的海报图片。",
+        "challengeVariable": "文字版式输入边界",
+        "inputCount": 1,
+        "runsPerInput": 1,
+        "totalOutputs": 1
+      }
+    ]
+  },
+  "tuneTestPlan": {
+    "summary": "Rule Freeze 后用十二张固定输入比较 Prompt 版本；每张运行三次，观察重复稳定性与回归。",
+    "rows": [
+      {
+        "testId": "P0-01",
+        "tier": "P0",
+        "inputDescription": "背景干净、脸部特征明确的单只短毛宠物照片。",
+        "challengeVariable": "宠物面部辨识",
+        "inputCount": 1,
+        "runsPerInput": 3,
+        "totalOutputs": 3
+      },
+      {
+        "testId": "P0-02",
+        "tier": "P0",
+        "inputDescription": "侧身姿态清楚、服装主色鲜明的单人物全身照片。",
+        "challengeVariable": "人物姿态",
+        "inputCount": 1,
+        "runsPerInput": 3,
+        "totalOutputs": 3
+      },
+      {
+        "testId": "P0-03",
+        "tier": "P0",
+        "inputDescription": "轮廓对称、内部结构清楚的单件玩具照片。",
+        "challengeVariable": "对称物体结构",
+        "inputCount": 1,
+        "runsPerInput": 3,
+        "totalOutputs": 3
+      },
+      {
+        "testId": "P0-04",
+        "tier": "P0",
+        "inputDescription": "轮廓不规则、两至三种主要颜色的植物照片。",
+        "challengeVariable": "不规则有机轮廓",
+        "inputCount": 1,
+        "runsPerInput": 3,
+        "totalOutputs": 3
+      },
+      {
+        "testId": "P0-05",
+        "tier": "P0",
+        "inputDescription": "天空、地面和单一建筑层次明确的日间风景。",
+        "challengeVariable": "简洁矩形场景",
+        "inputCount": 1,
+        "runsPerInput": 3,
+        "totalOutputs": 3
+      },
+      {
+        "testId": "P0-06",
+        "tier": "P0",
+        "inputDescription": "主体清楚、暖色灯光明显的夜间街景。",
+        "challengeVariable": "暗部与有限暖色盘",
+        "inputCount": 1,
+        "runsPerInput": 3,
+        "totalOutputs": 3
+      },
+      {
+        "testId": "P1-01",
+        "tier": "P1",
+        "inputDescription": "两人互动且服装颜色相近的合照。",
+        "challengeVariable": "相邻主体分离",
+        "inputCount": 1,
+        "runsPerInput": 3,
+        "totalOutputs": 3
+      },
+      {
+        "testId": "P1-02",
+        "tier": "P1",
+        "inputDescription": "三只动物轻度遮挡、背景简单的照片。",
+        "challengeVariable": "多主体数量",
+        "inputCount": 1,
+        "runsPerInput": 3,
+        "totalOutputs": 3
+      },
+      {
+        "testId": "P1-03",
+        "tier": "P1",
+        "inputDescription": "多个日常物体分布在桌面的俯拍照片。",
+        "challengeVariable": "多物体空间组织",
+        "inputCount": 1,
+        "runsPerInput": 3,
+        "totalOutputs": 3
+      },
+      {
+        "testId": "P1-04",
+        "tier": "P1",
+        "inputDescription": "主体颜色接近背景、轮廓仍可辨的照片。",
+        "challengeVariable": "低色差量化",
+        "inputCount": 1,
+        "runsPerInput": 3,
+        "totalOutputs": 3
+      },
+      {
+        "testId": "P2-01",
+        "tier": "P2",
+        "inputDescription": "枝叶、招牌和人群共同出现的高细节街景。",
+        "challengeVariable": "极高场景复杂度",
+        "inputCount": 1,
+        "runsPerInput": 3,
+        "totalOutputs": 3
+      },
+      {
+        "testId": "P2-02",
+        "tier": "P2",
+        "inputDescription": "以长段文字和小图标为主要信息的宣传海报。",
+        "challengeVariable": "文字主导输入边界",
+        "inputCount": 1,
+        "runsPerInput": 3,
+        "totalOutputs": 3
+      }
+    ]
+  },
+  "promptVersion": "0.0",
+  "seedreamPrompt": "基于用户输入的单张图片，生成一件真实拍摄的实体拼豆成品。先保留主要主体的身份、数量、姿态、关系与关键辨识特征，再将轮廓、颜色和明暗简化到正交豆格：单体内容形成边界完整、重心清楚的独立剪影，完整场景形成铺满矩形底板的画板。全图只由尺寸一致、中央开孔的圆柱形熔融拼豆逐颗紧密排列，以有限离散色块继承输入主色和层次，并在干净背景、柔和顶光下呈现豆粒厚度、细小接缝与自然接触阴影。",
+  "promptRuleMap": [
+    {
+      "sentence": "基于用户输入的单张图片，生成一件真实拍摄的实体拼豆成品。",
+      "ruleIds": [
+        "V06"
+      ]
+    },
+    {
+      "sentence": "先保留主要主体的身份、数量、姿态、关系与关键辨识特征，再将轮廓、颜色和明暗简化到正交豆格：单体内容形成边界完整、重心清楚的独立剪影，完整场景形成铺满矩形底板的画板。",
+      "ruleIds": [
+        "V01",
+        "V02"
+      ]
+    },
+    {
+      "sentence": "全图只由尺寸一致、中央开孔的圆柱形熔融拼豆逐颗紧密排列，以有限离散色块继承输入主色和层次，并在干净背景、柔和顶光下呈现豆粒厚度、细小接缝与自然接触阴影。",
+      "ruleIds": [
+        "V03",
+        "V04",
+        "V05",
+        "V06"
+      ]
+    }
+  ]
+}

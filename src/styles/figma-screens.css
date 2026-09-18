@@ -1,0 +1,48 @@
+/* Figma 21:6 / 36:6: 1280 × 720 reference, scoped away from canvas. */
+.role-page.figma-role-page { grid-template-columns:44% 56%; min-height:100vh; }
+.figma-role-page .role-intro { padding:38px; gap:60px; justify-content:flex-start; }
+.figma-role-page .brand { font-size:20px; letter-spacing:-1.2px; line-height:29px; }
+.figma-role-page .role-subtitle { font-size:18px; line-height:26.1px; letter-spacing:1.8px; }
+.figma-role-page .role-intro h1 { font-size:clamp(76px,8vw,126px); line-height:1.11328125; letter-spacing:-.085em; font-weight:700; }
+.figma-role-page .role-intro>p:last-child { margin:0; line-height:26.1px; }
+.figma-role-page .role-options { min-height:720px; }
+.figma-role-page .role-card { padding:22px; gap:20px; justify-content:flex-start; min-width:0; }
+.figma-role-page .role-portrait { height:409px; flex-shrink:0; display:flex; align-items:flex-end; }
+.figma-role-page .role-card img { width:198px; height:198px; margin:0; object-fit:contain; filter:none; mix-blend-mode:normal; }
+.figma-role-page .role-card>div:last-child { width:100%; }
+.figma-role-page .role-card h2 { font-size:28px; line-height:40.6px; letter-spacing:-1.12px; }
+.figma-role-page .role-card p { font-size:16px; line-height:23.2px; }
+.figma-role-page .role-action { font-size:12px; line-height:17.4px; margin-top:18px; padding-top:14px; }
+.figma-role-page .role-arrow { font-size:16px; line-height:1; transition:transform .2s ease; }
+.figma-role-page .role-card:hover .role-arrow { transform:translateX(3px); }
+.figma-template-page .template-index { padding:28px; }
+.figma-template-page .template-index .toolbar { height:64px; padding:0 12px; }
+.figma-template-page .template-index .catalog { grid-template-columns:repeat(4,minmax(0,1fr)); column-gap:24px; row-gap:24px; padding:12px; }
+.figma-template-page .template-index .catalog-image { aspect-ratio:4/3; margin-bottom:14px; }
+.figma-template-page .template-index .catalog-image img { object-fit:cover; object-position:50% 50% !important; }
+.figma-template-page .template-index .catalog-image img.cover-focus-lower { object-position:78% 78% !important;transform:scale(1.34);transform-origin:78% 78%; }
+.figma-template-page .template-index .catalog-title { font-size:16px; line-height:23.2px; }
+.figma-template-page .template-index .catalog-desc { font-size:12px; line-height:17.4px; }
+.figma-template-page .template-index .catalog-meta>div { min-width:0; }
+.figma-template-page .template-index .catalog-meta .eyebrow { white-space:nowrap; }
+.figma-template-page .template-index .pill { font-size:10px; flex-shrink:0; }
+@media(min-width:1281px){
+  .figma-role-page .role-portrait { height:calc(409px + max(0px, (100vh - 720px) / 2)); }
+}
+@media(max-width:1050px){
+  .role-page.figma-role-page { grid-template-columns:1fr; }
+  .figma-role-page .role-intro { min-height:0; gap:32px; border-right:0; border-bottom:1px solid var(--ink); }
+  .figma-role-page .role-options { min-height:0; }
+  .figma-role-page .role-portrait { height:230px; }
+  .figma-role-page .role-card { min-height:400px; }
+  .figma-template-page .template-index .catalog { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:620px){
+  .figma-role-page .role-intro { padding:24px; }
+  .figma-role-page .role-intro h1 { font-size:76px; }
+  .figma-role-page .role-options { grid-template-columns:1fr; }
+  .figma-template-page .template-index { padding:16px; }
+  .figma-template-page .template-index .toolbar { padding:0; gap:10px; }
+  .figma-template-page .search { width:40%; min-width:0; }
+  .figma-template-page .template-index .catalog { grid-template-columns:1fr; padding:12px 0; }
+}

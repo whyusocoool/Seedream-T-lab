@@ -1,0 +1,460 @@
+{
+  "reportType": "FIT",
+  "schemaVersion": "0.2",
+  "templateName": "拼豆风格",
+  "lineageId": "perler-run004-v03",
+  "sourceBatch": "perler-run004-fit-proxy-chatgpt-images",
+  "model": "ChatGPT Images（代理测试）",
+  "promptVersion": "0.0",
+  "caseCount": 8,
+  "ruleScores": [
+    {
+      "ruleId": "V01",
+      "priority": "MUST",
+      "scores": [
+        {
+          "caseId": "P0-01",
+          "outputId": "P0-01-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "猫的身份、数量和虎斑特征完整。"
+        },
+        {
+          "caseId": "P0-02",
+          "outputId": "P0-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "人物姿态、服装与围巾特征完整。"
+        },
+        {
+          "caseId": "P0-03",
+          "outputId": "P0-03-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "邮箱形体、开口和装饰完整。"
+        },
+        {
+          "caseId": "P0-04",
+          "outputId": "P0-04-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "建筑、红瓦和场景关系完整。"
+        },
+        {
+          "caseId": "P1-01",
+          "outputId": "P1-01-O01",
+          "applicable": true,
+          "score": 1,
+          "note": "两人数量与站姿保留，但面部身份泛化。"
+        },
+        {
+          "caseId": "P1-02",
+          "outputId": "P1-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "帽子、熊、兔及遮挡关系完整。"
+        },
+        {
+          "caseId": "P2-01",
+          "outputId": "P2-01-O01",
+          "applicable": true,
+          "score": 1,
+          "note": "三人和街角关系保留，但身份与局部姿态简化。"
+        },
+        {
+          "caseId": "P2-02",
+          "outputId": "P2-02-O01",
+          "applicable": true,
+          "score": 1,
+          "note": "海报层级保留，但英文拼写出现偏差。"
+        }
+      ],
+      "actualPoints": 13,
+      "maxPoints": 16,
+      "score": 81.25
+    },
+    {
+      "ruleId": "V02",
+      "priority": "MUST",
+      "scores": [
+        {
+          "caseId": "P0-01",
+          "outputId": "P0-01-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "正交豆格与完整构图成立，模式选择符合输入。"
+        },
+        {
+          "caseId": "P0-02",
+          "outputId": "P0-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "正交豆格与完整构图成立，模式选择符合输入。"
+        },
+        {
+          "caseId": "P0-03",
+          "outputId": "P0-03-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "正交豆格与完整构图成立，模式选择符合输入。"
+        },
+        {
+          "caseId": "P0-04",
+          "outputId": "P0-04-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "正交豆格与完整构图成立，模式选择符合输入。"
+        },
+        {
+          "caseId": "P1-01",
+          "outputId": "P1-01-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "正交豆格与完整构图成立，模式选择符合输入。"
+        },
+        {
+          "caseId": "P1-02",
+          "outputId": "P1-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "正交豆格与完整构图成立，模式选择符合输入。"
+        },
+        {
+          "caseId": "P2-01",
+          "outputId": "P2-01-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "正交豆格与完整构图成立，模式选择符合输入。"
+        },
+        {
+          "caseId": "P2-02",
+          "outputId": "P2-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "正交豆格与完整构图成立，模式选择符合输入。"
+        }
+      ],
+      "actualPoints": 16,
+      "maxPoints": 16,
+      "score": 100
+    },
+    {
+      "ruleId": "V03",
+      "priority": "MUST",
+      "scores": [
+        {
+          "caseId": "P0-01",
+          "outputId": "P0-01-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "等径中空豆粒、连续排列和拼豆材质清楚。"
+        },
+        {
+          "caseId": "P0-02",
+          "outputId": "P0-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "等径中空豆粒、连续排列和拼豆材质清楚。"
+        },
+        {
+          "caseId": "P0-03",
+          "outputId": "P0-03-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "等径中空豆粒、连续排列和拼豆材质清楚。"
+        },
+        {
+          "caseId": "P0-04",
+          "outputId": "P0-04-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "等径中空豆粒、连续排列和拼豆材质清楚。"
+        },
+        {
+          "caseId": "P1-01",
+          "outputId": "P1-01-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "等径中空豆粒、连续排列和拼豆材质清楚。"
+        },
+        {
+          "caseId": "P1-02",
+          "outputId": "P1-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "等径中空豆粒、连续排列和拼豆材质清楚。"
+        },
+        {
+          "caseId": "P2-01",
+          "outputId": "P2-01-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "等径中空豆粒、连续排列和拼豆材质清楚。"
+        },
+        {
+          "caseId": "P2-02",
+          "outputId": "P2-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "等径中空豆粒、连续排列和拼豆材质清楚。"
+        }
+      ],
+      "actualPoints": 16,
+      "maxPoints": 16,
+      "score": 100
+    },
+    {
+      "ruleId": "V04",
+      "priority": "PREFERRED",
+      "scores": [
+        {
+          "caseId": "P0-01",
+          "outputId": "P0-01-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "有限色盘继承输入主色，实体光影自然。"
+        },
+        {
+          "caseId": "P0-02",
+          "outputId": "P0-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "有限色盘继承输入主色，实体光影自然。"
+        },
+        {
+          "caseId": "P0-03",
+          "outputId": "P0-03-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "有限色盘继承输入主色，实体光影自然。"
+        },
+        {
+          "caseId": "P0-04",
+          "outputId": "P0-04-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "有限色盘继承输入主色，实体光影自然。"
+        },
+        {
+          "caseId": "P1-01",
+          "outputId": "P1-01-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "有限色盘继承输入主色，实体光影自然。"
+        },
+        {
+          "caseId": "P1-02",
+          "outputId": "P1-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "有限色盘继承输入主色，实体光影自然。"
+        },
+        {
+          "caseId": "P2-01",
+          "outputId": "P2-01-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "有限色盘继承输入主色，实体光影自然。"
+        },
+        {
+          "caseId": "P2-02",
+          "outputId": "P2-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "有限色盘继承输入主色，实体光影自然。"
+        }
+      ],
+      "actualPoints": 16,
+      "maxPoints": 16,
+      "score": 100
+    },
+    {
+      "ruleId": "V05",
+      "priority": "PREFERRED",
+      "scores": [
+        {
+          "caseId": "P0-01",
+          "outputId": "P0-01-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "画面信息由拼豆造型表达，未增加无关排版层。"
+        },
+        {
+          "caseId": "P0-02",
+          "outputId": "P0-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "画面信息由拼豆造型表达，未增加无关排版层。"
+        },
+        {
+          "caseId": "P0-03",
+          "outputId": "P0-03-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "画面信息由拼豆造型表达，未增加无关排版层。"
+        },
+        {
+          "caseId": "P0-04",
+          "outputId": "P0-04-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "画面信息由拼豆造型表达，未增加无关排版层。"
+        },
+        {
+          "caseId": "P1-01",
+          "outputId": "P1-01-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "画面信息由拼豆造型表达，未增加无关排版层。"
+        },
+        {
+          "caseId": "P1-02",
+          "outputId": "P1-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "画面信息由拼豆造型表达，未增加无关排版层。"
+        },
+        {
+          "caseId": "P2-01",
+          "outputId": "P2-01-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "画面信息由拼豆造型表达，未增加无关排版层。"
+        },
+        {
+          "caseId": "P2-02",
+          "outputId": "P2-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "画面信息由拼豆造型表达，未增加无关排版层。"
+        }
+      ],
+      "actualPoints": 16,
+      "maxPoints": 16,
+      "score": 100
+    },
+    {
+      "ruleId": "V06",
+      "priority": "MUST",
+      "scores": [
+        {
+          "caseId": "P0-01",
+          "outputId": "P0-01-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "实体拼豆成品摄影感与接触阴影可信。"
+        },
+        {
+          "caseId": "P0-02",
+          "outputId": "P0-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "实体拼豆成品摄影感与接触阴影可信。"
+        },
+        {
+          "caseId": "P0-03",
+          "outputId": "P0-03-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "实体拼豆成品摄影感与接触阴影可信。"
+        },
+        {
+          "caseId": "P0-04",
+          "outputId": "P0-04-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "实体拼豆成品摄影感与接触阴影可信。"
+        },
+        {
+          "caseId": "P1-01",
+          "outputId": "P1-01-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "实体拼豆成品摄影感与接触阴影可信。"
+        },
+        {
+          "caseId": "P1-02",
+          "outputId": "P1-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "实体拼豆成品摄影感与接触阴影可信。"
+        },
+        {
+          "caseId": "P2-01",
+          "outputId": "P2-01-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "实体拼豆成品摄影感与接触阴影可信。"
+        },
+        {
+          "caseId": "P2-02",
+          "outputId": "P2-02-O01",
+          "applicable": true,
+          "score": 2,
+          "note": "实体拼豆成品摄影感与接触阴影可信。"
+        }
+      ],
+      "actualPoints": 16,
+      "maxPoints": 16,
+      "score": 100
+    }
+  ],
+  "summaryScores": {
+    "overall": 95.98214285714286,
+    "must": 100,
+    "preferred": 100
+  },
+  "hardGates": {
+    "overallPass": true,
+    "mustPassRatePass": true,
+    "everyMustRulePassRatePass": true,
+    "pass": true
+  },
+  "status": "GO",
+  "promptOptimizationRecommended": true,
+  "recommendedActions": [
+    "CONTINUE_TUNING"
+  ],
+  "capabilitySignals": [
+    "8/8 输出均稳定呈现等径中空拼豆、正交网格和实体摄影感。",
+    "单体剪影与矩形场景画板能随输入内容切换。",
+    "P0 输入的主体、色盘和构图保留稳定。"
+  ],
+  "failures": [
+    {
+      "id": "F01",
+      "name": "复杂输入的精确保留下降",
+      "description": "多人、拥挤场景和文字主导输入仍保留整体结构，但面部身份、局部姿态或文字拼写出现泛化与偏差。",
+      "relatedRules": [
+        "V01"
+      ],
+      "frequency": {
+        "count": 3,
+        "total": 8
+      },
+      "severity": "Medium",
+      "promptFixability": "Medium",
+      "evidenceCases": [
+        "P1-01",
+        "P2-01",
+        "P2-02"
+      ],
+      "evidenceOutputs": [
+        "P1-01-O01",
+        "P2-01-O01",
+        "P2-02-O01"
+      ]
+    }
+  ],
+  "candidateRules": [],
+  "tunePriorities": [
+    "V01"
+  ],
+  "recommendations": [
+    "优先在 TUNE 中加强多人身份、局部姿态和输入固有文字的保留。",
+    "保持 V03 与 V06 当前表达，监测后续 Prompt 修改是否引发材质回归。"
+  ],
+  "riskFlags": [
+    "本报告使用 ChatGPT Images 代理结果，不代表 Seedream 模型能力；不得据此发布 Seedream 模板。"
+  ]
+}

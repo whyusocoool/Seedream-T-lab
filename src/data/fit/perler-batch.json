@@ -1,0 +1,158 @@
+{
+  "schemaVersion": "0.1",
+  "batchId": "perler-run004-fit-proxy-chatgpt-images",
+  "lineageId": "perler-run004-v03",
+  "defineSpecSha256": "b0852c3d18efe83463cad463dbadd5995fd2df8229d56ba87b449b35853c17b0",
+  "purpose": "FIT",
+  "model": "ChatGPT Images（代理测试）",
+  "promptArtifact": "../../define/prompt-0.0.txt",
+  "promptSha256": "66a5ff591c5c4aa4d584354e081359e839cbc826d32fbab1f2752b222d84350e",
+  "fixedSetId": "perler-run004-fit-set-v1",
+  "ready": true,
+  "cases": [
+    {
+      "caseId": "P0-01",
+      "applicabilityTier": "P0",
+      "inputAssets": [
+        {
+          "path": "inputs/P0-01-input.png",
+          "sha256": "fee2f427229b9efad4baeaa3593e199756eb7e7f20ab2fa3131e64646a427453"
+        }
+      ],
+      "outputs": [
+        {
+          "outputId": "P0-01-O01",
+          "path": "outputs/P0-01-output.png",
+          "sha256": "cfa165865b6067f471f81bdef1e424eb775a46bf49acc75ba161450c8a6ea6bc"
+        }
+      ],
+      "notes": "用户确认复用本轮既有 ChatGPT Images 代理输出；非 Seedream 模型证据。"
+    },
+    {
+      "caseId": "P0-02",
+      "applicabilityTier": "P0",
+      "inputAssets": [
+        {
+          "path": "inputs/P0-02-input.png",
+          "sha256": "c830c642ca03d1629448293108243444464d224dae82c81c6b7e987a512424d3"
+        }
+      ],
+      "outputs": [
+        {
+          "outputId": "P0-02-O01",
+          "path": "outputs/P0-02-output.png",
+          "sha256": "75e89e42732056203ba9e660128a59fb530f037f68e8c89be61feaef0df6c7fb"
+        }
+      ],
+      "notes": "用户确认复用本轮既有 ChatGPT Images 代理输出；非 Seedream 模型证据。"
+    },
+    {
+      "caseId": "P0-03",
+      "applicabilityTier": "P0",
+      "inputAssets": [
+        {
+          "path": "inputs/P0-03-input.png",
+          "sha256": "16a71454fc7c82cfdcbf55b84f44e4598148d104dd73264b36217cfef6523335"
+        }
+      ],
+      "outputs": [
+        {
+          "outputId": "P0-03-O01",
+          "path": "outputs/P0-03-output.png",
+          "sha256": "47f64bd30254968ffc67b155ec4d98457ded0cd91ee2d8b9394cefda74b121f3"
+        }
+      ],
+      "notes": "用户确认复用本轮既有 ChatGPT Images 代理输出；非 Seedream 模型证据。"
+    },
+    {
+      "caseId": "P0-04",
+      "applicabilityTier": "P0",
+      "inputAssets": [
+        {
+          "path": "inputs/P0-04-input.png",
+          "sha256": "63c321b83f8073976f2aea8da2c7c214037684598dc2f0f60fe98841faee8215"
+        }
+      ],
+      "outputs": [
+        {
+          "outputId": "P0-04-O01",
+          "path": "outputs/P0-04-output.png",
+          "sha256": "4fed3194aaf10dc9c9c9989d2c92a55ec00daa6fe179d4f9ab75c0726ab8fd6d"
+        }
+      ],
+      "notes": "用户确认复用本轮既有 ChatGPT Images 代理输出；非 Seedream 模型证据。"
+    },
+    {
+      "caseId": "P1-01",
+      "applicabilityTier": "P1",
+      "inputAssets": [
+        {
+          "path": "inputs/P1-01-input.png",
+          "sha256": "901bd5a3ed209ce94768b6d9e7dafe50d805550fcf08887e69cabbd507626826"
+        }
+      ],
+      "outputs": [
+        {
+          "outputId": "P1-01-O01",
+          "path": "outputs/P1-01-output.png",
+          "sha256": "ac7b227ad1187825a5cbb418c421bbbd1940e48d0c8d0db5e0624bbf2c8004ec"
+        }
+      ],
+      "notes": "用户确认复用本轮既有 ChatGPT Images 代理输出；非 Seedream 模型证据。"
+    },
+    {
+      "caseId": "P1-02",
+      "applicabilityTier": "P1",
+      "inputAssets": [
+        {
+          "path": "inputs/P1-02-input.png",
+          "sha256": "15eaab19b10a9b32ceed3798da027cac8f908cca90ea72f6f456523fcbd66a1e"
+        }
+      ],
+      "outputs": [
+        {
+          "outputId": "P1-02-O01",
+          "path": "outputs/P1-02-output.png",
+          "sha256": "a4f8332842c683df15a7717189daec42e21fc3aa09ce7188d603c4c7c4c1e9ab"
+        }
+      ],
+      "notes": "用户确认复用本轮既有 ChatGPT Images 代理输出；非 Seedream 模型证据。"
+    },
+    {
+      "caseId": "P2-01",
+      "applicabilityTier": "P2",
+      "inputAssets": [
+        {
+          "path": "inputs/P2-01-input.png",
+          "sha256": "92c879411285369de5cf69b23d56f68b019b522b5ef16dce603d8ebc621a3dde"
+        }
+      ],
+      "outputs": [
+        {
+          "outputId": "P2-01-O01",
+          "path": "outputs/P2-01-output.png",
+          "sha256": "3aaf613457df49e86e015c33a4960938fa1849262026b65a0740297231f35d37"
+        }
+      ],
+      "notes": "用户确认复用本轮既有 ChatGPT Images 代理输出；非 Seedream 模型证据。"
+    },
+    {
+      "caseId": "P2-02",
+      "applicabilityTier": "P2",
+      "inputAssets": [
+        {
+          "path": "inputs/P2-02-input.png",
+          "sha256": "259732dab8c08a6b537afa095104198ef924968117dac9e19584ceea418b2e62"
+        }
+      ],
+      "outputs": [
+        {
+          "outputId": "P2-02-O01",
+          "path": "outputs/P2-02-output.png",
+          "sha256": "7a543cca4413c4a180e7e9c8a2e669c336682288f7828cd5567836bf5adc2f21"
+        }
+      ],
+      "notes": "用户确认复用本轮既有 ChatGPT Images 代理输出；非 Seedream 模型证据。"
+    }
+  ]
+}
