@@ -14,6 +14,7 @@ import InviteDialog from '@/components/InviteDialog';
 import { canDeleteTemplate, canEditTemplate } from '@/data/templateAccess';
 import { getUXStageAction } from '@/data/templateTodo';
 import { cloudRead } from '@/data/cloudRead';
+import ResilientImage from '@/components/ResilientImage';
 
 const labels: Record<StageType, [string, string]> = { DEFINE: ['DEFINE', '规格定义'], FIT: ['FIT', '适配验证'], UX_RULE_REVIEW: ['UX REVIEW', '规则审查'], TUNE: ['TUNE', '参数优化'], RELEASE: ['RELEASE', '发布'] };
 const inputLabels: Record<string, string> = { TEXT_ONLY: '纯文本', TEXT_WITH_IMAGE: '文本＋图片', IMAGE_ONLY: '单张图片' };
@@ -59,6 +60,7 @@ export default function TemplateDetail() {
   const [generatedCloudReady,setGeneratedCloudReady]=useState(!cloudEnabled);
   const generatedBaseline=useRef<string|null>(null);
   const [recoveryDismissed,setRecoveryDismissed]=useState(()=>window.localStorage.getItem(`recovery-dismissed/${templateId}`)==='yes');
+  useEffect(()=>{setRecoveryDismissed(window.localStorage.getItem(`recovery-dismissed/${templateId}`)==='yes')},[templateId]);
   const [hydratedTemplateId,setHydratedTemplateId]=useState<string>();
   useEffect(()=>{
     if(!template || hydratedTemplateId === template.id)return;
@@ -175,7 +177,7 @@ export default function TemplateDetail() {
   };
 
   return <><AppHeader showNavigation={false}/><main className="page template-detail-page">
-    {template.recoveryNote&&!recoveryDismissed&&<aside role="status" style={{padding:12,background:'#fff4df',marginBottom:16,display:'flex',gap:12,alignItems:'center'}}><span style={{flex:1}}>{template.recoveryNote} <Link to="/recovery">核对并恢复参考图</Link></span><button type="button" aria-label="关闭恢复提示" onClick={()=>{setRecoveryDismissed(true);window.localStorage.setItem(`recovery-dismissed/${templateId}`,'yes')}}>×</button></aside>}
+    {template.recoveryNote&&!recoveryDismissed&&<aside role="status" style={{padding:12,background:'#fff4df',marginBottom:16,display:'flex',gap:12,alignItems:'flex-start',maxWidth:'100%',boxSizing:'border-box'}}><span style={{flex:1,minWidth:0,overflowWrap:'anywhere'}}>此模板由原记录恢复，部分历史信息仍待核对。 <Link to="/recovery">核对参考图</Link></span><button type="button" aria-label="关闭恢复提示" style={{flexShrink:0,width:36,height:36,fontSize:24,border:'1px solid #bfb5a4',background:'transparent',cursor:'pointer'}} onClick={()=>{setRecoveryDismissed(true);try{window.localStorage.setItem(`recovery-dismissed/${templateId}`,'yes')}catch{/* Closing stays effective for this page even when storage is full. */}}}>×</button></aside>}
     <section className="template-detail-layout">
       <aside className="template-detail-sidebar">
         <div>
@@ -208,8 +210,8 @@ export default function TemplateDetail() {
           onPointerMove={(event) => { if (drag.current) event.currentTarget.scrollLeft = drag.current.scroll - (event.clientX - drag.current.x); }}
           onPointerUp={() => { drag.current = null; }} onPointerCancel={() => { drag.current = null; }} onLostPointerCapture={() => { drag.current = null; }}
           onKeyDown={(event) => { if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') { event.preventDefault(); event.currentTarget.scrollBy({ left: event.key === 'ArrowRight' ? 180 : -180, behavior: 'smooth' }); } }}>
-          {gallery.map((src, index) => <figure key={`${src}-${index}`}><img draggable={false} src={src} alt={`${template.name}参考图 ${index + 1}`}/></figure>)}
-          {!gallery.length && <p className="empty-state">暂无参考图片</p>}
+          {gallery.map((src, index) => <figure key={`${src}-${index}`}><ResilientImage src={src} assetPath={references.length?template.referenceImagePaths?.[index]:template.coverImagePath} alt={`${template.name}参考图 ${index + 1}`} retryable/></figure>)}
+          {!gallery.length && <p className="empty-state">原参考图待恢复，<Link to="/recovery">核对并恢复参考图</Link>；若原图已无备份，需要重新上传。</p>}
         </div>
         <section className="template-detail-workflow" aria-label="验证流程">
           <div className="flow-heading"><span className="eyebrow">验证流程</span><span>{run?.runNumber || '尚未开始'}</span></div>

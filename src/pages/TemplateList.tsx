@@ -4,6 +4,7 @@ import { useAppStore } from '@/store/appStore';
 import { can } from '@/data/permissions';
 import { canViewTemplate } from '@/data/templateVisibility';
 import AppHeader from '@/components/AppHeader';
+import ResilientImage from '@/components/ResilientImage';
 import { mockData } from '@/data/mockData';
 import { getUXTemplateTodo } from '@/data/templateTodo';
 import type { MemberRole, StageType, TemplateCase } from '@/types';
@@ -86,7 +87,7 @@ export default function TemplateList(){
           const defineBadge=template.defineStatus==='ANALYZING'?'DEFINE 分析中':template.defineStatus==='FAILED'?'DEFINE 失败':template.defineStatus==='CANCELLED'?'DEFINE 已中止':'';
           return <article className={`catalog-card ${state.terminated?'terminated':''} ${state.todo?'has-todo':''}`} key={template.id}>
             <Link to={`/templates/${template.id}`} aria-label={`打开${template.name}`}>
-            <div className="catalog-image"><img className={template.name==='童趣插画'?'cover-focus-lower':''} src={template.coverImageUrl} alt={template.name}/></div>
+            <div className="catalog-image"><ResilientImage className={template.name==='童趣插画'?'cover-focus-lower':''} src={template.coverImageUrl} assetPath={template.coverImagePath} alt={template.name}/></div>
             <div className="catalog-meta">
               <div>
                 <div className="eyebrow">{String(index+1).padStart(2,'0')} / {template.alias||'Template'}</div>

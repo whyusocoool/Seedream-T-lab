@@ -94,6 +94,9 @@ function ScopedCanvas({scopeId,workspaceId}:{scopeId:string;workspaceId:string})
   const nav=useNavigate();
   const user=useAppStore(s=>s.currentUser);
   const isTester=user?.role==='tester';
+  const templates=useAppStore(s=>s.templates);
+  const updateTemplate=useAppStore(s=>s.updateTemplate);
+  const [coverMessage,setCoverMessage]=useState('');
   const activeRole=user?.role;
   const job=activeRole&&isWorkspaceRole(activeRole)?activeRole:null;
   const [saved]=useState(()=>{
@@ -681,6 +684,8 @@ function ScopedCanvas({scopeId,workspaceId}:{scopeId:string;workspaceId:string})
             )}
           </div>}
         </span>
+        {user?.role==='ux'&&selectedItems.length===1&&<select aria-label="将选中图片设为模板封面" value="" onChange={event=>{const image=selectedItems[0];const template=templates.find(item=>item.id===event.target.value);if(!image||!template)return;updateTemplate(template.id,{coverImageUrl:image.src,coverImagePath:image.assetPath});setCoverMessage(`已设置“${template.name}”封面`);}}><option value="">设为模板封面…</option>{templates.filter(template=>template.workspaceId===workspaceId).map(template=><option key={template.id} value={template.id}>{template.name}</option>)}</select>}
+        {coverMessage&&<span role="status">{coverMessage}</span>}
         <button className="btn primary" disabled={!selected.size} onClick={aggregate}>{user?.role==='tester'?'＋打包测试':'＋聚合模板'} <b>{selected.size||''}</b></button>
       </div>
     </div>
