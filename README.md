@@ -49,21 +49,34 @@
 
 ## 快速开始
 
-### 安装依赖
+这个仓库保存的是项目源码。其他人可以克隆或下载后继续开发，但 `localhost` 只代表运行项目的那台电脑，不是可供他人访问的在线网址。
+
+### 1. 获取源码
+
+```bash
+git clone https://github.com/whyusocoool/Seedream-T-lab.git
+cd Seedream-T-lab
+```
+
+也可以在 GitHub 仓库页面选择 **Code → Download ZIP**，解压后进入项目目录。
+
+### 2. 安装依赖
 
 ```bash
 npm install
 ```
 
-### 启动开发服务器
+### 3. 启动本地开发服务器
 
 ```bash
 npm run dev
 ```
 
-访问 http://localhost:5173
+终端会显示本机访问地址，通常是 `http://localhost:5173/`。请在运行上述命令的同一台电脑上打开它；其他人不能通过这个地址访问你的电脑。
 
-### 构建生产版本
+> 当前仓库尚未提供公开在线预览地址。如需让别人无需下载即可查看，需要另行部署到 GitHub Pages、Vercel、Netlify 或其他静态托管平台。
+
+### 4. 构建生产版本
 
 ```bash
 npm run build
